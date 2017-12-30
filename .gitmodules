@@ -1,0 +1,3 @@
+[submodule "link/.bash/git-aware-prompt"]
+	path = link/.bash/git-aware-prompt
+	url = ./link/.bash/git-aware-prompt
