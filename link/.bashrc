@@ -1,7 +1,7 @@
 # Git aware promt
-export GITAWAREPROMPT=~/.bash/git-aware-prompt
-source "${GITAWAREPROMPT}/main.sh"
-export PS1="\u@\h \W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+# export GITAWAREPROMPT=~/.bash/git-aware-prompt
+# source "${GITAWAREPROMPT}/main.sh"
+# export PS1="\u@\h \W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 
 # My dotfiles!
 export DOTFILES=~/dotfiles
@@ -42,3 +42,6 @@ alias gl='git log'
 export VISUAL=vim
 export EDITOR=vi
 # set -o vi
+
+#Promt
+source $DOTFILES/source/cowboy_promt.sh
