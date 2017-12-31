@@ -5,7 +5,7 @@
 echo 'Dotfiles - Francesco "frasse" Mancino - inpired by: http://benalman.com/'
 
 # Where the magic happens.
-export DOTFILES=~/.dotfiles
+export DOTFILES=~/dotfiles
 
 # Logging stuff.
 function e_header()   { echo -e "\n\033[1m$@\033[0m"; }
@@ -84,7 +84,12 @@ function copy_do() {
 # DO STUFF
 
 # Add binaries into the path
-[[ -d $DOTFILES/bin ]] && export PATH=$DOTFILES/bin:$PATH
+[[ -d $DOTFILES/bin ]] && export PATH=$DOTFILES/bin:$PATH && echo 'added to path'
+cd $DOTFILES
+
+# Tweak file globbing.
+shopt -s dotglob
+shopt -s nullglob
 
 # If backups are needed, this is where they'll go.
 backup_dir="$DOTFILES/backups/$(date "+%Y_%m_%d-%H_%M_%S")/"
