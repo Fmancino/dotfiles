@@ -27,14 +27,14 @@
 
 if [[ ! "${__prompt_colors[@]}" ]]; then
   __prompt_colors=(
-    "36" # information color
+    "32" # information color
     "37" # bracket color
     "31" # error color
   )
 
   if [[ "$SSH_TTY" ]]; then
     # connected via ssh
-    __prompt_colors[0]="32"
+    __prompt_colors[0]="36"
   elif [[ "$USER" == "root" ]]; then
     # logged in as root
     __prompt_colors[0]="35"

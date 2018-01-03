@@ -45,3 +45,6 @@ export EDITOR=vi
 
 #Promt
 source $DOTFILES/source/cowboy_promt.sh
+
+# Autocorrect typos in path names when using `cd`
+shopt -s cdspell;
