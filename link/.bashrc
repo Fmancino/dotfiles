@@ -15,6 +15,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 
+#export JAVA_HOME=`/usr/libexec/java_home`
 # Add coloring
 export CLICOLOR=1
 
@@ -48,3 +49,11 @@ source $DOTFILES/source/cowboy_promt.sh
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
+
+# History search:
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
+bind '"^P":history-search-backward'
+bind '"^N":history-search-forward'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
