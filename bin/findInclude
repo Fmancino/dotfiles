@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#-------------------------------------------------------------------------
+#FILENAME: cutIncludes.sh
+
+#PURPOSE:
+
+#CREATION DATE: 08-02-2018
+
+#LAST MODIFIED: Thu Feb  8 22:43:39 2018
+
+#AUTHOR: Francesco Mancino, francescoman@protonmail.com
+#-------------------------------------------------------------------------
+include="$(cat $1 | grep '#include' | sed 's/^.* ["<]\(.*\)[">]/\1/')"
+find . -name $include
