@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#-------------------------------------------------------------------------
+#FILENAME: logOutput.sh
+
+#PURPOSE: https://stackoverflow.com/questions/692000/how-do-i-write-stderr-to-a-file-while-using-tee-with-a-pipe
+
+#CREATION DATE: 09-02-2018
+
+#LAST MODIFIED: Fri 09 Feb 2018 10:51:26 AM CET
+
+#AUTHOR: Francesco Mancino
+#-------------------------------------------------------------------------
+rm stdoutFrancesco.log
+rm stderrFrancesco.log
+# from lhunath answer:
+$1 > >(tee -a stdoutFrancesco.log) 2> >(tee -a stderrFrancesco.log >&2)
