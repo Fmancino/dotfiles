@@ -10,7 +10,13 @@
 
 #AUTHOR: Francesco Mancino
 #-------------------------------------------------------------------------
-rm stdoutFrancesco.log
-rm stderrFrancesco.log
+
+stdout='stdoutFrancesco.log'
+stderr='stderrFrancesco.log'
+
+# remove if file exists
+[ -f $stdout ] && rm $stdout
+[ -f $stderr ] && rm $stderr
+
 # from lhunath answer:
-$1 > >(tee -a stdoutFrancesco.log) 2> >(tee -a stderrFrancesco.log >&2)
+$1 > >(tee -a "$stdout") 2> >(tee -a "$stderr" >&2)
