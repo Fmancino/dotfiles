@@ -10,5 +10,5 @@
 
 #AUTHOR: Francesco Mancino, francescoman@protonmail.com
 #-------------------------------------------------------------------------
-include="$(cat $1 | grep '#include' | sed 's/^.* ["<]\(.*\)[">]/\1/')"
-find . -name $include
+cat $1 | grep '#include' | sed 's/^.* ["<]\(.*\)[">]/\1/' | xargs -I % find . -name %
+
