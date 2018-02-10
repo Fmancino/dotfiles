@@ -11,7 +11,7 @@
 #AUTHOR: Francesco Mancino, francescoman@protonmail.com
 #-------------------------------------------------------------------------
 # look for includes in all input arguments, delete copies
-include=$(cat $@ | grep '#include' | sed 's/^.* ["<]\(.*\)[">]/\1/' | sort | uniq)
+include=$(grep '#include' $@ | sed 's/^.* ["<]\(.*\)[">]/\1/' | sort | uniq)
 
 # If in git directory change to root.
 # (statement after && executes only if first statement has non zero exit status)
