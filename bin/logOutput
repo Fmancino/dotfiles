@@ -14,9 +14,9 @@
 stdout='stdoutFrancesco.log'
 stderr='stderrFrancesco.log'
 
-# remove if file exists
-[ -f $stdout ] && rm $stdout
-[ -f $stderr ] && rm $stderr
+# Creates empty file, clearing the old one if exists
+> $stdout
+> $stderr
 
 # from lhunath answer:
 $1 > >(tee -a "$stdout") 2> >(tee -a "$stderr" >&2)
