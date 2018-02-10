@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #-------------------------------------------------------------------------
-#FILENAME: cutIncludes.sh
+#FILENAME: findIncludes.sh
 
-#PURPOSE:
+#PURPOSE: Go truoght some files, and print out the path to their includes
 
 #CREATION DATE: 08-02-2018
 
@@ -10,5 +10,13 @@
 
 #AUTHOR: Francesco Mancino, francescoman@protonmail.com
 #-------------------------------------------------------------------------
-cat $1 | grep '#include' | sed 's/^.* ["<]\(.*\)[">]/\1/' | xargs -I % find . -name %
+# look for includes in all input arguments, delete copies
+include=$(cat $@ | grep '#include' | sed 's/^.* ["<]\(.*\)[">]/\1/' | sort | uniq)
 
+# if in git directory change to root
+if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) ]]; then
+    cd $(git rev-parse --show-toplevel)
+fi
+
+# print path to includes -n 1 stays for one argument per line
+echo $include | xargs -n 1 -I % find . -name % | sort
