@@ -10,7 +10,7 @@
 
 #AUTHOR: Francesco Mancino, francescoman@protonmail.com
 #-------------------------------------------------------------------------
-# look for includes in all input arguments, delete copies
+# Look for includes in all input arguments, delete copies
 include=$(grep '#include' $@ | sed 's/^.* ["<]\(.*\)[">]/\1/' | sort | uniq)
 
 # If in git directory change to root.
