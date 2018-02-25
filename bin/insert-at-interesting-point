@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+#-------------------------------------------------------------------------
+#FILENAME: bashEd.sh
+
+#PURPOSE: Learn to use ed and stdin.
+
+#CREATION DATE: 25-02-2018
+
+#LAST MODIFIED: Sun Feb 25 23:57:31 2018
+
+#AUTHOR: Francesco Mancino, francescoman@protonmail.com
+#-------------------------------------------------------------------------
+# read whole content (until delimiter -d '') of STDIN in -r (raw) format
+read -rd '' FILE
+#insert this content after interesting string
+ed -s $1 << EOF > /dev/null
+    /interesting
+    a
+$FILE
+.
+w
+q
+EOF
+# show file
+cat $1
