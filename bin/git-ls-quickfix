@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#-------------------------------------------------------------------------
+#FILENAME: git-ls-quickfix.sh
+
+#PURPOSE:
+
+#CREATION DATE: 27-02-2018
+
+#LAST MODIFIED: Tue Feb 27 23:08:35 2018
+
+#AUTHOR: Francesco Mancino, francescoman@protonmail.com
+#-------------------------------------------------------------------------
+git ls-tree --full-tree --name-only -r HEAD | grep -i -E $1 | sed -e 's/$/:1:1/'
