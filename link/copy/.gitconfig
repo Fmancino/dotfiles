@@ -1,0 +1,48 @@
+[cora]
+    pager = less -FRXS
+[core]
+    pager = less -FRXS
+    editor = vimx
+[color]
+    ui = true
+[push]
+    default = current
+[alias]
+    plog = log --pretty=format:'%Cred%h%Creset %s -%C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    st = status
+    ci = commit
+    co = checkout
+    br = branch
+    di = difftool
+    pr = pull --rebase
+    bu = branch -u origin/master
+    a = add
+    au = add -u
+    subupd = submodule update --recursive --init
+    sgrep = grep --recurse-submodules
+    pop = stash pop
+    s = status
+    d = diff
+    dt = difftool
+    l = log
+    c = commit
+    cane = commit --amend --no-edit
+    dc = diff --cached
+[merge]
+    tool = meld
+[diff]
+    tool = gvimdiff
+[difftool]
+    prompt = false
+[mergetool]
+    prompt = false
+[color "diff"]
+    meta = yellow bold
+    commit = green bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[init]
+    templatedir = ~/.git_template
