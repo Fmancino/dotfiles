@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#-------------------------------------------------------------------------
+#FILENAME: commit-steps.sh
+
+#PURPOSE:
+
+#CREATION DATE: 07-03-2018
+
+#LAST MODIFIED: Wed 07 Mar 2018 04:03:01 PM CET
+
+#AUTHOR: Francesco Mancino, francescoman@protonmail.com
+#-------------------------------------------------------------------------
+git add -u && git diff --cached && git status && read -p 'Adding done, do you wish to commit? (y/n)' WANTCOMMIT
+
+case "$WANTCOMMIT" in
+    [yY][eE][sS]|[yY])
+        git commit;
+        ;;
+    *)
+        ;;
+esac
