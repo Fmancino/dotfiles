@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#-------------------------------------------------------------------------
+#FILENAME: commit-amend-review.sh
+
+#PURPOSE:To commit amend and review in a fast automated manner.
+
+#CREATION DATE: 07-03-2018
+
+#LAST MODIFIED: Wed 07 Mar 2018 03:21:48 PM CET
+
+#AUTHOR: Francesco Mancino, francescoman@protonmail.com
+#-------------------------------------------------------------------------
+git pull -r && git submodule update --recursive --init
+git add -u && git diff --cached && read -p 'Adding done, do you want to push with amend? (y/n)' WANTAMEND
+
+case "$WANTAMEND" in
+    [yY][eE][sS]|[yY])
+        git commit --amend --no-edit && git review
+        ;;
+    *)
+        ;;
+esac
