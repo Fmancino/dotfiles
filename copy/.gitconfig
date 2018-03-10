@@ -1,13 +1,12 @@
-[cora]
-    pager = less -FRXS
 [core]
     pager = less -FRXS
-    editor = vimx
+    editor = vim
 [color]
     ui = true
 [push]
     default = current
 [alias]
+	ctags = !.git/hooks/ctags
     plog = log --pretty=format:'%Cred%h%Creset %s -%C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     st = status
