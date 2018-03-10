@@ -9,27 +9,39 @@ export DOTFILES=~/dotfiles
 # Add local direcotry to path
 PATH=$PATH:$DOTFILES/bin
 
+# OS detection
+function is_osx() {
+  [[ "$OSTYPE" =~ ^darwin ]] || return 1
+}
+
+# Os specific settings
+if is_osx; then
+    export VISUAL=nvim
+    export EDITOR=vim
+
+    # Easy to open things
+    alias o='open -a'
+
+    alias vim='nvim'
+
+    # Problems with my l
+    alias òsa='ls -all'
+    alias òs='ls'
+else
+    export VISUAL=vim
+    export EDITOR=vi
+fi
 
 # Add language
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 
-#export JAVA_HOME=`/usr/libexec/java_home`
 # Add coloring
 export CLICOLOR=1
 
 # Add support for global patterns
 shopt -s extglob
-
-# Easy to open things
-alias o='open -a'
-
-alias lsa='ls -all'
-
-# Problems with my l
-alias òsa='ls -all'
-alias òs='ls'
 
 # Easier navigation: .., ..., -
 alias ..='cd ..'
@@ -39,10 +51,8 @@ alias ...='cd ../..'
 alias s='git status'
 alias gl='git log'
 
-# Editor
-export VISUAL=vim
-export EDITOR=vi
-# set -o vi
+# Find easyer
+alias f='find . -name'
 
 #Promt
 source $DOTFILES/source/cowboy_promt.sh
