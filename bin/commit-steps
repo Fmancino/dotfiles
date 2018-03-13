@@ -10,12 +10,12 @@
 
 #AUTHOR: Francesco Mancino, francescoman@protonmail.com
 #-------------------------------------------------------------------------
-git add -u && git diff --cached && git status && read -p 'Adding done, do you wish to commit? (y/n)' WANTCOMMIT
+git add -u && git diff --cached && git status && read -p 'Adding done, do you wish to commit? (enter/n)' WANTCOMMIT
 
 case "$WANTCOMMIT" in
-    [yY][eE][sS]|[yY])
-        git commit;
+    [nN][oO]|[nN])
         ;;
     *)
+        git commit;
         ;;
 esac
