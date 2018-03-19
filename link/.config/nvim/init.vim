@@ -18,6 +18,17 @@ tnoremap <Esc> <C-\><C-n>
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
+
+function! BuildYCM(info)
+  " info is a dictionary with 3 fields
+  " - name:   name of the plugin
+  " - status: 'installed', 'updated', or 'unchanged'
+  " - force:  set on PlugInstall! or PlugUpdate!
+  if a:info.status == 'installed' || a:info.force
+    !./install.py
+  endif
+endfunction
+
 call plug#begin('~/.vim/plugged')
 
 " PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run install script
@@ -30,4 +41,5 @@ Plug 'vim-airline/vim-airline'
 Plug 'kassio/neoterm'
 Plug 'kchmck/vim-coffee-script'
 Plug 'rhysd/nyaovim-markdown-preview'
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 call plug#end()
