@@ -1,8 +1,3 @@
-# Git aware promt
-# export GITAWAREPROMPT=~/.bash/git-aware-prompt
-# source "${GITAWAREPROMPT}/main.sh"
-# export PS1="\u@\h \W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
-
 # My dotfiles!
 export DOTFILES=~/dotfiles
 
@@ -15,6 +10,7 @@ function is_osx() {
 }
 
 # Os specific settings
+VIM=~/.vim
 if is_osx; then
     export VISUAL=nvim
     export EDITOR=vim
