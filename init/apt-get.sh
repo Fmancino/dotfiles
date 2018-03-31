@@ -4,11 +4,16 @@ source $DOTFILES/source/os-functions.sh
 source $DOTFILES/source/log-functions.sh
 
 echo "os detected: $(get_os)"
+
+function install-program() {
+    if [[ ! "$(type -P $1)" ]]; then
+        e_header "Installing $1"
+        sudo apt-get install $1
+    fi
+}
+
 # If Git is not installed, install it
-if [[ ! "$(type -P git)" ]]; then
-  e_header "Installing Git"
-  sudo apt-get install git-core
-fi
+install-program git
 
 # If Git isn't installed by now, something exploded. We gots to quit!
 if [[ ! "$(type -P git)" ]]; then
@@ -16,20 +21,11 @@ if [[ ! "$(type -P git)" ]]; then
   exit 1
 fi
 
-if [[ ! "$(type -P curl)" ]]; then
-  e_header "Installing curl"
-  sudo apt-get install curl
-fi
+install-program curl
 
-if [[ ! "$(type -P ranger)" ]]; then
-  e_header "Installing ranger"
-  sudo apt-get install ranger
-fi
+install-program ranger
 
-if [[ ! "$(type -P tree)" ]]; then
-  e_header "Installing tree"
-  sudo apt-get install tree
-fi
+install-program tree
 
 e_header "Cloning .vim"
 git clone https://github.com/Fmancino/.vim ~/.vim
