@@ -1,2 +1,5 @@
 /backups/
 .DS_store
+*history*
+bookmarks
+tagged
