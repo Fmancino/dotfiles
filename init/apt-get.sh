@@ -37,7 +37,7 @@ if [[ ! "$(type -P nvim)" ]]; then
         sudo apt-get update
     fi
 
-    sudo apt-get install neovim
+    sudo apt-get -y install neovim
 
     sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
     sudo update-alternatives --config vi
@@ -54,7 +54,7 @@ fi
 #python 3
 if [[ ! "$(type -P pip3)" ]]; then
     e_header "Installing pip"
-    sudo apt install python3-pip
+    sudo apt-get -y install python3-pip
     sudo -H pip3 install --upgrade neovim
 fi
 
