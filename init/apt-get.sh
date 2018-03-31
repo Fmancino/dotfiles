@@ -8,7 +8,7 @@ echo "os detected: $(get_os)"
 function install-program() {
     if [[ ! "$(type -P $1)" ]]; then
         e_header "Installing $1"
-        sudo apt-get install $1
+        sudo apt-get -y install $1
     fi
 }
 
