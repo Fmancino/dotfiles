@@ -14,6 +14,10 @@ tnoremap <Esc> <C-\><C-n>
 :inoremap <C-k> <C-\><C-N><C-w>k
 :inoremap <C-l> <C-\><C-N><C-w>l
 
+au TermOpen * setlocal nospell
+au TermOpen * setlocal nonumber
+au TermOpen * setlocal norelativenumber
+
 " Plug plugin
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
