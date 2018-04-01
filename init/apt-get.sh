@@ -27,6 +27,8 @@ install-program ranger
 
 install-program tree
 
+install-program tmux
+
 e_header "Cloning .vim"
 git clone https://github.com/Fmancino/.vim ~/.vim
 
