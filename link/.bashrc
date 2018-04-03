@@ -134,3 +134,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
+source $DOTFILES/source/ros-bash.sh
