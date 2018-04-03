@@ -30,7 +30,7 @@ install-program tree
 install-program tmux
 
 e_header "Cloning .vim"
-git clone https://github.com/Fmancino/.vim ~/.vim
+git clone --recurse-submodules -j8 https://github.com/Fmancino/.vim ~/.vim
 
 if [[ ! "$(type -P nvim)" ]]; then
     e_header "Installing nvim"
