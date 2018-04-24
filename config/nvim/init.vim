@@ -46,4 +46,6 @@ Plug 'kassio/neoterm'
 Plug 'kchmck/vim-coffee-script'
 Plug 'rhysd/nyaovim-markdown-preview'
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+Plug 'tpope/vim-dispatch'
+Plug 'radenling/vim-dispatch-neovim'
 call plug#end()
