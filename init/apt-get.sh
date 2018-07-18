@@ -22,16 +22,12 @@ if [[ ! "$(type -P git)" ]]; then
 fi
 
 install-program curl
-
 install-program ranger
-
 install-program tree
-
 install-program tmux
-
 install-program python-dev
-
 install-program cmake
+install-program exuberant-ctags
 
 e_header "Cloning .vim"
 git clone --recurse-submodules -j8 https://github.com/Fmancino/.vim ~/.vim
