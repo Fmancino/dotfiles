@@ -125,5 +125,11 @@ if is_ubuntu || is_debian; then
     e_header "Installer done"
 fi
 
+# install ctags as describe by tpope
+if [ ! -f "$HOME/.git_template/hooks/ctags" ]; then
+    e_header 'Installing "effortless_ctags"'
+    $DOTFILES/effortless_ctags/setup.sh
+fi
+
 # All done!
 e_header "All done!"
