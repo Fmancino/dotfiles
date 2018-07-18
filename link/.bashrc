@@ -11,22 +11,18 @@ function is_osx() {
 
 # Os specific settings
 VIM=~/.vim
+
 if is_osx; then
     export VISUAL=nvim
-    export EDITOR=vim
 
     # Easy to open things
     alias o='open -a'
 
     alias vim='nvim'
-
-    # Problems with my l
-    alias òsa='ls -all'
-    alias òs='ls'
 else
     export VISUAL=vim
-    export EDITOR=vi
 fi
+export EDITOR=vi
 
 # Add language
 export LC_ALL=en_US.UTF-8
@@ -38,6 +34,10 @@ export CLICOLOR=1
 
 # Add support for global patterns
 shopt -s extglob
+
+# Problems with my l
+alias òsa='ls -all'
+alias òs='ls'
 
 # Easier navigation: .., ..., -
 alias ..='cd ..'

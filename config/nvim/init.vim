@@ -41,6 +41,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   " and you don't have to run install script if you use fzf only in Vim.
 
 Plug 'vim-airline/vim-airline'
+Plug 'neovimhaskell/haskell-vim'
 
 Plug 'kassio/neoterm'
 Plug 'kchmck/vim-coffee-script'
@@ -48,4 +49,9 @@ Plug 'rhysd/nyaovim-markdown-preview'
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'tpope/vim-dispatch'
 Plug 'radenling/vim-dispatch-neovim'
+Plug 'vim-python/python-syntax'
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
 call plug#end()
+
+" for python-syntax
+let g:python_highlight_all = 1
