@@ -51,7 +51,16 @@ Plug 'tpope/vim-dispatch'
 Plug 'radenling/vim-dispatch-neovim'
 Plug 'vim-python/python-syntax'
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
+Plug 'bfredl/nvim-miniyank'
 call plug#end()
+
+
+map p <Plug>(miniyank-autoput)
+map P <Plug>(miniyank-autoPut)
+map <leader>x <Plug>(miniyank-cycle)
+map <Leader>c <Plug>(miniyank-tochar)
+map <Leader>l <Plug>(miniyank-toline)
+map <Leader>b <Plug>(miniyank-toblock)
 
 " for python-syntax
 let g:python_highlight_all = 1
