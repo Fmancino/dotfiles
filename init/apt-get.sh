@@ -29,6 +29,10 @@ install-program tree
 
 install-program tmux
 
+install-program python-dev
+
+install-program cmake
+
 e_header "Cloning .vim"
 git clone --recurse-submodules -j8 https://github.com/Fmancino/.vim ~/.vim
 
