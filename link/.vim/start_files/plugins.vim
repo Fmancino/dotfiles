@@ -2,7 +2,6 @@
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
-let g:fma_useYCM = 1 " 1 true 0 false
 
 function! BuildYCM(info)
   " info is a dictionary with 3 fields

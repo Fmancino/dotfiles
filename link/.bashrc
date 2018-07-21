@@ -18,7 +18,7 @@ if is_osx; then
     # Easy to open things
     alias o='open -a'
 
-    alias vim='nvim'
+   # alias vim='nvim'
 else
     export VISUAL=vim
 fi

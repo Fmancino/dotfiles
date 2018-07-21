@@ -9,19 +9,16 @@ else
     set clipboard=unnamedplus
 endif
 
+"If you have a good terminal (or gui)
 if g:fma_badTerminal == 0
     set list          " Display unprintable characters f12 - switches
     set listchars=tab:•\ ,trail:•,extends:»,precedes:« " Unprintable chars mapping
-else
-    if has ("gui_running")
-    else
-        let g:fma_plugins = 0 " 0 == false, 1 == true
-        set bg=dark
-    endif
+    colo mymolo
+    set spell
+    set cursorline
 endif
 
 set mouse=a "be able to use mouse
-colo mymolo
 set colorcolumn=80
 
 " to make quickfix work better
@@ -87,13 +84,11 @@ set showcmd
 set hidden
 set wildmode=list:longest
 set visualbell
-set cursorline
 set ttyfast
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
 set undofile
-set spell
 set showmatch
 set hlsearch
 
