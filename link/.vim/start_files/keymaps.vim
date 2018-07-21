@@ -3,10 +3,12 @@ let mapleader = " " "the <leader> map
 nnoremap <leader><space> :noh<cr>
 nnoremap <leader>q :q<Enter>
 nnoremap <leader>f :find *
-nnoremap <leader>e :Ex<Enter>
-nnoremap <leader>n :NERDTree<Enter>
-nnoremap <leader>N :NERDTreeClose<Enter>
+nnoremap <leader>n :NERDTreeToggle<Enter>
 nnoremap <leader>m "myiw:!get-merge <C-R>m<Enter>
+
+" From vinegar.vim, minus the rest
+nnoremap - :Ex<Enter>
+
 inoremap <Tab> <C-N>
 
 nnoremap <leader>cf :let @+=expand("%:p")<CR>    " Mnemonic: Copy File path
