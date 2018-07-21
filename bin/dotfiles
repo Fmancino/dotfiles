@@ -131,5 +131,8 @@ if [ ! -f "$HOME/.git_template/hooks/ctags" ]; then
     $DOTFILES/effortless_ctags/setup.sh
 fi
 
+e_header 'Copying user flags'
+$DOTFILES/link/.vim/start_files/copy_flags.sh
+
 # All done!
 e_header "All done!"

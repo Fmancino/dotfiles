@@ -1,4 +1,7 @@
 " Global flags used for costum settings (can be changed often)
+" This file is supposed to be copied to $DOTFILES/user_flags.vim and be
+" modiefied as per personal preference. The reason we have it here is to get
+" a model that works for most cases
 
 "Standard values for flags:  0 == false, 1 == true
 
@@ -12,8 +15,10 @@ let g:fma_user = 0
 " vim)
 if (has("gui_running"))
     let g:fma_badTerminal = 0 "if gui is running you are not on a terminal
+    let g:fma_mittyTerminal = 0
 else
     let g:fma_badTerminal = 0 "up to the user to specify if the terminal is bad
+    let g:fma_mittyTerminal = 0
 endif
 
 "disable plugins for bad terminal

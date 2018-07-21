@@ -1,7 +1,7 @@
 "source settings
 
 source ~/.vim/start_files/standard_settings.vim
-source ~/.vim/start_files/flags.vim
+source ~/dotfiles/user_flags.vim
 source ~/.vim/start_files/personal_settings.vim
 if g:fma_plugins == 1
     source ~/.vim/start_files/plugins.vim
