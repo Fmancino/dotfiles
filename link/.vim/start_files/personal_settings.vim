@@ -117,3 +117,10 @@ set textwidth=79
 set formatoptions=qrn1
 
 set wmh=0 "makes it possible to have a file window with only the name
+
+if (g:fma_mittyTerminal == 1)
+    let &t_ti.="\e[2 q"
+    let &t_SI.="\e[5 q"
+    let &t_EI.="\e[2 q"
+    let &t_te.="\e[0 q"
+endif
