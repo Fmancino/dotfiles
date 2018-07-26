@@ -1,4 +1,3 @@
-let mapleader = " " "the <leader> map
 
 nnoremap <leader><space> :noh<cr>
 nnoremap <leader>q :q<Enter>
