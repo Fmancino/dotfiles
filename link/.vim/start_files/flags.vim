@@ -28,6 +28,8 @@ endif
 
 " Use or not use you complete me plugin (heavy and difficult to install in certain enviroments)
 let g:fma_useYCM = 1
+" Use or not use you complete me plugin (heavy and difficult to install in certain enviroments)
+let g:fma_useMiniYank = 0
 
 if has('nvim')
     "set nvim spcific flags
