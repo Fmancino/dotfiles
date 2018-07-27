@@ -1,13 +1,11 @@
 " Operating systems: macunix unix win32 win32unix
 if has('macunix')
-    " access the system clipboard as standard (*)
     set guifont=Monaco:h13
-    set clipboard^=unnamed
 else
     set guifont=Inconsolata\ 13
-    " access the system clipboard as standard (+)
-    set clipboard=unnamedplus
 endif
+" Maximum access to systems clipboard
+set clipboard^=unnamed,unnamedplus
 
 "If you have a good terminal (or gui)
 if g:fma_badTerminal == 0
