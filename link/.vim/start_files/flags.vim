@@ -1,24 +1,18 @@
-" Global flags used for costum settings (can be changed often)
-" This file is supposed to be copied to $DOTFILES/user_flags.vim and be
-" modiefied as per personal preference. The reason we have it here is to get
-" a model that works for most cases
+" Global flags used for costom settings (can be changed by exporting flags)
 
 "Standard values for flags:  0 == false, 1 == true
 
 " Use plugins
-let g:fma_plugins = 1
-
-" Used for servers where i do not have administator rights
-let g:fma_user = 0
+let g:fma_plugins = !exists("$VIM_FMA_NO_PLUGINS")
 
 " Defines a terminal environment that does not support many features (use virgin
 " vim)
 if (has("gui_running"))
-    let g:fma_badTerminal = 0 "if gui is running you are not on a terminal
-    let g:fma_mittyTerminal = 0
+    let g:fma_badTerminal = exists("$VIM_FMA_BADTERMIAL") "if gui is running you are not on a terminal
+    let g:fma_mittyTerminal = exists("$VIM_FMA_MINTTY")
 else
-    let g:fma_badTerminal = 0 "up to the user to specify if the terminal is bad
-    let g:fma_mittyTerminal = 0
+    let g:fma_badTerminal = exists("$VIM_FMA_BADTERMIAL") "up to the user to specify if the terminal is bad
+    let g:fma_mittyTerminal = exists("$VIM_FMA_MINTTY")
 endif
 
 "disable plugins for bad terminal
@@ -27,18 +21,17 @@ if (g:fma_badTerminal == 1)
 endif
 
 " Use or not use you complete me plugin (heavy and difficult to install in certain enviroments)
-let g:fma_useYCM = 1
-" Use or not use you complete me plugin (heavy and difficult to install in certain enviroments)
-let g:fma_useMiniYank = 0
-
-if has('nvim')
-    "set nvim spcific flags
+if exists("$VIM_FMA_USE_YCM")
+    let g:fma_useYCM = $VIM_FMA_USE_YCM "has to be specified to zero or one
 else
-    "set vim specific flags
-    let g:fma_useYCM = 0 " Do not use you-complete-me
+    if has('nvim')
+        let g:fma_useYCM = 1 "use it as a standard for nvim
+    else
+        "set vim specific flags
+        let g:fma_useYCM = 0 " Do not use you-complete-me as a standard for vim
+    endif
 endif
 
-if (g:fma_user == 1) "connecting on a server I am not admistrating
-    let g:fma_useYCM = 0 " Do not use you-complete-me
-endif
+" Use or not use mini yank (evaluating it)
+let g:fma_useMiniYank = exists($VIM_FMA_UMY)
 
