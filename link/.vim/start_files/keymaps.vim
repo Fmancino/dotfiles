@@ -79,6 +79,8 @@ nnoremap å [
 nnoremap ¨ ]
 nnoremap ä }
 nnoremap ö {
+nnoremap Ä <c-]>
+nnoremap Ö <c-[>
 inoremap € $
 inoremap ¤ $
 inoremap ¨ ]
