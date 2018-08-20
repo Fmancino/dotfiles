@@ -8,6 +8,8 @@
 [alias]
     plog = log --pretty=format:'%Cred%h%Creset %s -%C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    l = log --graph --decorate --pretty=oneline --abbrev-commit -10
+    ln = log --graph --decorate --pretty=oneline --abbrev-commit --name-status -5
     loln = log --graph --decorate --pretty=oneline --abbrev-commit --name-status
     st = status
     ci = commit
@@ -24,7 +26,6 @@
     s = status
     d = diff
     dt = difftool
-    l = log
     c = commit
     cane = commit --amend --no-edit
     dc = diff --cached
