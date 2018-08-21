@@ -84,6 +84,7 @@ noremap Ö {
 noremap Ä }
 noremap ö [
 noremap ä ]
+noremap gä g]
 inoremap Ö {
 inoremap Ä }
 inoremap ö [
