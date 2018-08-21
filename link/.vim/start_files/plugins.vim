@@ -33,6 +33,7 @@ nmap <F8> :TagbarToggle<CR>
 
 " Unmanaged plugin (manually installed and updated)
 Plug '~/.vim/bundle/a'
+Plug '~/.vim/bundle/gtags'
 
 if has('nvim')
     " PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run install script
