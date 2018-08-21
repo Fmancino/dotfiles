@@ -73,32 +73,30 @@ inoremap jj <ESC>
 inoremap kk <ESC>
 
 " Do not like swedish keyboard for $
-nnoremap € $
-nnoremap ¤ $
-nnoremap å [
-nnoremap ¨ ]
-nnoremap ä }
-nnoremap ö {
-nnoremap Ä <c-]>
-nnoremap Ö <c-[>
-inoremap € $
-inoremap ¤ $
-inoremap ¨ ]
-inoremap ä }
-inoremap ö {
-inoremap ö {}<left>
-inoremap ö<CR> {<CR>}<ESC>O
-inoremap {<CR> {<CR>}<ESC>O
-vnoremap € $
-vnoremap ¤ $
-vnoremap å [
-vnoremap ¨ ]
-vnoremap ä }
-vnoremap ö {
+noremap € $
+noremap ¤ $
+
+" Fast navigation whith swedish keyboard
+noremap å <c-]>
+
+" Parenthesis easy to reach
+noremap Ö {
+noremap Ä }
+noremap ö [
+noremap ä ]
+inoremap Ö {
+inoremap Ä }
+inoremap ö [
+inoremap ä ]
+
 inoremap ,å å
 inoremap ,¨ ¨
 inoremap ,ä ä
 inoremap ,ö ö
+
+inoremap Ö<CR> {<CR>}<ESC>O
+inoremap {<CR> {<CR>}<ESC>O
+
 nnoremap œ <C-o> " Go back with alt-o on swedish keyboard
 
 " Search selected text
