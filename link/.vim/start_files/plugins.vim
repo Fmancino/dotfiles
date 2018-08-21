@@ -23,6 +23,9 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdcommenter'
 
+Plug 'majutsushi/tagbar'
+nmap <F8> :TagbarToggle<CR>
+
 " Plug 'tpope/vim-surround'
 " Plug 'keith/swift.vim'
 " Plug 'vim-airline/vim-airline'
