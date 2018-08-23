@@ -28,8 +28,8 @@ set shell=bash
 set autoread
 
 " save when anything happens
-set autowrite
-set autowriteall
+"set autowrite
+"set autowriteall
 
 " Set spelling on git commits
 autocmd FileType gitcommit setlocal spell
