@@ -77,14 +77,14 @@ noremap € $
 noremap ¤ $
 
 " Fast navigation whith swedish keyboard
-noremap å <c-]>
+map å <c-]>
 
 " Parenthesis easy to reach
-noremap Ö {
-noremap Ä }
-noremap ö [
-noremap ä ]
-noremap gä g]
+map Ö {
+map Ä }
+map ö [
+map ä ]
+map gä g]
 inoremap Ö {
 inoremap Ä }
 inoremap ö [

@@ -78,3 +78,6 @@ let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_include_dirs = [ '../inc', '../if', 'inc', 'if' ]
 let g:syntastic_cpp_compiler_options = ' -std=c++0x'
 " let g:syntastic_cpp_auto_refresh_includes = 1
+
+" load the man plugin automatically
+runtime! ftplugin/man.vim
