@@ -17,6 +17,8 @@ endfunction
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-dispatch'
+noremap <leader>b :Make<CR>
+
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'octol/vim-cpp-enhanced-highlight'
