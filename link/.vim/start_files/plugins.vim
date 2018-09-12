@@ -18,6 +18,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-dispatch'
 noremap <leader>b :Make<CR>
+noremap <leader>wb :wa<CR>:Make<CR>
 
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
