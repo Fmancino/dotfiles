@@ -1,7 +1,7 @@
 " to make like vim
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
-source ~/.vim/.vimrc
+source ~/.vimrc
 
 " nice terminal mode
 tnoremap <Esc> <C-\><C-n>
