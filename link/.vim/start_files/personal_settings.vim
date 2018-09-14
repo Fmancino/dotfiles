@@ -7,6 +7,8 @@ endif
 " Maximum access to systems clipboard
 set clipboard^=unnamed,unnamedplus
 
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
 "If you have a good terminal (or gui)
 if g:fma_badTerminal == 0
     set list          " Display unprintable characters f12 - switches
