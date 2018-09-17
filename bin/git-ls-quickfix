@@ -11,4 +11,4 @@
 #AUTHOR: Francesco Mancino, francescoman@protonmail.com
 #-------------------------------------------------------------------------
 DIR=$(git rev-parse --show-toplevel)
-git ls-tree --full-tree --name-only -r HEAD | grep -i -E $1 | sed -e 's/$/:1:1/' -e "s|^|"$DIR"/|"
+git ls-tree --full-tree --name-only -r HEAD | grep -i -E $1 | sed -e 's/$/:1:1/' -e "s|^|"$DIR"/|" -e "s|$(pwd)/||"
