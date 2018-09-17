@@ -25,6 +25,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdcommenter'
+Plug 'mzlogin/vim-markdown-toc'
 
 Plug 'majutsushi/tagbar'
 nmap <F8> :TagbarToggle<CR>
