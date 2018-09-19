@@ -9,6 +9,9 @@ function is_osx() {
   [[ "$OSTYPE" =~ ^darwin ]] || return 1
 }
 
+# remove contrl-s
+stty -ixon
+
 # Os specific settings
 VIM=~/.vim
 
