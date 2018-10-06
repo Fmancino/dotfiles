@@ -1,4 +1,3 @@
-
 nnoremap <leader><space> :noh<cr>
 nnoremap <leader>q :q<Enter>
 nnoremap <leader>f :find *

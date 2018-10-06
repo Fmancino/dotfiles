@@ -38,3 +38,5 @@ function! DeleteInactiveBufs()
 endfunction
 command! Bdi :call DeleteInactiveBufs()
 
+" map W to save (since is is a common error to type :W insted of :w)
+command! W w
