@@ -42,16 +42,6 @@ noremap <C-Right>  <C-W>l
 noremap <C-E>  4<C-E>
 noremap <C-Y>  4<C-Y>
 
-"Set hardmode"
-" nnoremap <up> <nop>
-" nnoremap <down> <nop>
-" nnoremap <left> <nop>
-" nnoremap <right> <nop>
-" inoremap <up> <nop>
-" inoremap <down> <nop>
-" inoremap <left> <nop>
-" inoremap <right> <nop>
-
 " Add emacs style bindings:
 inoremap <C-A> <Home>
 inoremap <C-B> <Left>
@@ -103,13 +93,20 @@ nnoremap œ <C-o> " Go back with alt-o on swedish keyboard
 " Search selected text
 vnoremap <expr> // 'y/\V'.escape(@",'\').'<CR>'
 
-"autoclose parenthesis
-ino < <><left>
-ino << <<
+" Search for selected text, forwards or backwards.
+" see: http://vim.wikia.com/wiki/Search_for_visually_selected_text
+vnoremap <silent> * :<C-U>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy/<C-R><C-R>=substitute(
+  \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gV:call setreg('"', old_reg, old_regtype)<CR>
+vnoremap <silent> # :<C-U>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy?<C-R><C-R>=substitute(
+  \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gV:call setreg('"', old_reg, old_regtype)<CR>
 
 "do not need to press ESC to save and exit from insert mode
-inoremap :wq <ESC>:wq<CR>
-inoremap ZZ <ESC>:wq<CR>
 inoremap <C-S> <ESC>:w<CR>
 nnoremap <C-S> :w<CR>
 
