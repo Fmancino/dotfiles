@@ -1,0 +1,14 @@
+{
+"workbench.colorTheme": "Visual Studio Dark",
+"workbench.editor.showTabs": false,
+"shellLauncher.shells.windows": [
+    {
+        "shell": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "label": "PowerShell"
+    },
+    {
+        "shell": "C:\\Program Files\\Git\\bin\\bash.exe",
+        "label": "Git bash"
+    }
+]
+}
