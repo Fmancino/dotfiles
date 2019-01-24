@@ -84,4 +84,6 @@ let g:syntastic_cpp_compiler_options = ' -std=c++0x'
 " let g:syntastic_cpp_auto_refresh_includes = 1
 
 " load the man plugin automatically
-runtime! ftplugin/man.vim
+if  !has('nvim')
+    runtime! ftplugin/man.vim
+endif
