@@ -39,9 +39,10 @@ nmap <F8> :TagbarToggle<CR>
 Plug '~/.vim/bundle/a'
 Plug '~/.vim/bundle/gtags'
 
+" PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run install script
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 if has('nvim')
-    " PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run install script
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     " Both options are optional. You don't have to install fzf in ~/.fzf
     " and you don't have to run install script if you use fzf only in Vim.
     Plug 'neovimhaskell/haskell-vim'
