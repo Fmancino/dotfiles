@@ -142,3 +142,14 @@ source $DOTFILES/source/git-completion.bash
 if [ -f ~/user_bash.sh ]; then
     source ~/user_bash.sh
 fi
+
+# export FZF_DEFAULT_COMMAND='
+  # (git ls-tree -r --name-only HEAD ||
+   # find . -path "*/\.*" -prune -o -type f -print -o -type l -print |
+      # sed s/^..//) 2> /dev/null'
+# --files: List files that would be searched but do not search
+# --no-ignore: Do not respect .gitignore, etc...
+# --hidden: Search hidden files and folders
+# --follow: Follow symlinks
+# --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob \!.git/*'
