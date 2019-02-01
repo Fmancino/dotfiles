@@ -18,7 +18,7 @@ if g:fma_badTerminal == 0
     set cursorline
 endif
 
-set mouse=a "be able to use mouse
+" set mouse=a "be able to use mouse
 set colorcolumn=80
 
 " to make quickfix work better
