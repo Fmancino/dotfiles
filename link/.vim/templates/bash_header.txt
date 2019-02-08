@@ -9,6 +9,6 @@
 
 #LAST MODIFIED:
 
-#AUTHOR: Francesco Mancino, francescoman@protonmail.com
+#AUTHOR:
 #-------------------------------------------------------------------------
 .
