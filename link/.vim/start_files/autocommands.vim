@@ -1,13 +1,11 @@
 autocmd QuickFixCmdPost *grep* cwindow
 
+" for fancy configurations see:
+" https://www.thegeekstuff.com/2008/12/vi-and-vim-autocommand-3-steps-to-add-custom-header-to-your-file/
 autocmd bufnewfile *.sh so ~/.vim/templates/bash_header.txt
-autocmd bufnewfile *.sh exe "1," . 10 . "g/FILENAME:.*/s//FILENAME: " .expand("%")
-autocmd bufnewfile *.sh exe "1," . 10 . "g/CREATION DATE:.*/s//CREATION DATE: " .strftime("%d-%m-%Y")
+autocmd bufnewfile *.sh exe "1," . 5 . "g/CREATION DATE:.*/s//CREATION DATE: " .strftime("%d-%m-%Y")
 autocmd bufnewfile *.sh :normal G
-autocmd Bufwritepre,filewritepre *.sh execute "normal ma"
 
-autocmd Bufwritepre,filewritepre *.sh exe "1," . 10 . "g/LAST MODIFIED:.*/s/LAST MODIFIED:.*/LAST MODIFIED: " .strftime("%c")
-autocmd bufwritepost,filewritepost *.sh execute "normal `a"
 
 autocmd bufnewfile *.py so ~/.vim/templates/python3_header.txt
 
