@@ -56,6 +56,9 @@ alias f='find . -name'
 #Promt
 source $DOTFILES/source/cowboy_promt.sh
 
+# goto see -> https://github.com/iridakos/goto
+source $DOTFILES/source/goto.sh
+
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
 
