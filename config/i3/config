@@ -33,7 +33,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # start a tmux
-bindsym $mod+t exec i3-sensible-terminal -e tmux
+bindsym $mod+t exec i3-sensible-terminal -e /home/${USER}/dotfiles/bin/tmux.sh
 
 # start ranger
 bindsym $mod+n exec i3-sensible-terminal -e ranger
@@ -185,7 +185,7 @@ bindsym $mod+z exec i3lock && systemctl suspend
 bindsym $mod+b exec qutebrowser
 bindsym $mod+shift+b exec firefox
 
-exec --no-startup-id /home/fma/.screenlayout/home2.sh && feh --bg-scale Downloads/blue.jpg
+exec --no-startup-id /home/${USER}/.screenlayout/home2.sh && feh --bg-scale Downloads/blue.jpg
 exec --no-startup-id i3-sensible-terminal
 exec_always --no-startup-id termite -e checkErrors.sh --hold
 exec_always --no-startup-id feh --bg-scale Downloads/blue.jpg
