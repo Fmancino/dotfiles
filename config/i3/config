@@ -32,6 +32,15 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# start a tmux
+bindsym $mod+t exec i3-sensible-terminal -e tmux
+
+# start ranger
+bindsym $mod+n exec i3-sensible-terminal -e ranger
+
+# start ranger
+bindsym $mod+i exec i3-sensible-terminal -e htop
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
