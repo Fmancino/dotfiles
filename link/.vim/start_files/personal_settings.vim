@@ -93,7 +93,7 @@ set showmatch
 set hlsearch
 
 " set a directory to store the undo history
-set undodir=~/.vimundo/
+set undodir=~/.vim/vimundo/
 
 " highlight matching braces
 set showmatch
