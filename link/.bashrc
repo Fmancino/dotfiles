@@ -46,6 +46,9 @@ alias òs='ls'
 alias ..='cd ..'
 alias ...='cd ../..'
 
+# Smarter tumx
+alias tmux='TERM=xterm-256color tmux'
+
 # Make git easyer
 alias s='git status'
 alias gl='git log'

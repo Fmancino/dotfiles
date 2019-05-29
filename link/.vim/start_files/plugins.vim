@@ -20,7 +20,7 @@ Plug 'tpope/vim-dispatch'
 noremap <leader>b :Make<CR>
 noremap <leader>wb :wa<CR>:Make<CR>
 
-Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'christoomey/vim-tmux-navigator'

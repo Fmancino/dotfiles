@@ -8,6 +8,7 @@ nnoremap <leader>m "myiw:!get-merge <C-R>m<Enter>
 nnoremap - :Ex<Enter>
 
 inoremap <Tab> <C-N>
+inoremap ,<Tab> <Tab>
 
 nnoremap <leader>cf :let @+=expand("%:p")<CR>    " Mnemonic: Copy File path
 nnoremap <leader>yf :let @"=expand("%:p")<CR>    " Mnemonic: Yank File path
