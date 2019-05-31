@@ -1,0 +1,10 @@
+#!/bin/sh
+# configuration working for universal ctags that is in git
+# More details: https://github.com/universal-ctags/ctags or https://ctags.io/
+set -e
+PATH="/usr/local/bin:$PATH"
+dir="`git rev-parse --git-dir`"
+trap 'rm -f "$dir/$$.tags"' EXIT
+git ls-files | \
+  exctags --tag-relative=yes -L - -f"$dir/$$.tags" --fields=+iaS --extras=+q
+mv "$dir/$$.tags" "$dir/tags"
