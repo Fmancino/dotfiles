@@ -48,7 +48,7 @@ URxvt.keysym.Control-0x2d: perl:font-size:decrease
 *.color11:      #f4bf75
 
 ! blue
-*.color4:       #66d9ef
+*.color4:       #0428FF
 *.color12:      #66d9ef
 
 ! magenta
