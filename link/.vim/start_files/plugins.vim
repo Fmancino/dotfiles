@@ -39,6 +39,8 @@ nmap <F8> :TagbarToggle<CR>
 Plug '~/.vim/bundle/a'
 Plug '~/.vim/bundle/gtags'
 
+Plug 'ap/vim-css-color'
+
 " PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run install script
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
