@@ -12,8 +12,12 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 # Launch Polybar, using default config location ~/.config/polybar/config
 # Launch bar1 and bar2
 polybar -m
-xrandr | grep 'HDMI1 connected' && MONITOR=HDMI1 polybar example &
-xrandr | grep 'eDP1 connected' && MONITOR=eDP1 polybar example &
+#!/bin/sh
+if xrandr | grep 'HDMI1 connected'; then
+    MONITOR=HDMI1 polybar example &
+else
+    xrandr | grep 'eDP1 connected' && MONITOR=eDP1 polybar example &
+fi
 
 # DISPLAY1="$( | grep 'eDP1\|VGA-1' | cut -d ' ' -f1)"
 # [[ ! -z "$DISPLAY1" ]] && MONITOR="$DISPLAY1" polybar example &
