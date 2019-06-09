@@ -73,6 +73,7 @@ function cd(){
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
 
+set -o vi
 # History search:
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
