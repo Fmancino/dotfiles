@@ -41,6 +41,11 @@ Plug '~/.vim/bundle/gtags'
 
 Plug 'ap/vim-css-color'
 
+Plug 'nathanaelkane/vim-indent-guides'
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+autocmd FileType python IndentGuidesEnable
+
 " PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run install script
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
