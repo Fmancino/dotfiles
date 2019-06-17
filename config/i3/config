@@ -188,7 +188,7 @@ bindsym $mod+shift+b exec firefox
 
 exec_always --no-startup-id /home/${USER}/.screenlayout/home2.sh && feh --bg-scale Downloads/blue.jpg
 exec --no-startup-id i3-sensible-terminal -e /home/${USER}/dotfiles/bin/tmux.sh
-exec_always /home/${USER}/dotfiles/bin/restart-compton.sh
+exec_always /home/${USER}/dotfiles/bin/prestart.sh 'compton -b'
 exec_always --no-startup-id termite -e checkErrors.sh --hold
 exec_always --no-startup-id feh --bg-scale Downloads/blue.jpg
 exec_always --no-startup-id flashfocus
