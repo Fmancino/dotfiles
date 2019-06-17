@@ -34,7 +34,7 @@ function do_stuff() {
       # If _test function returns a string, skip file and print that message.
       skip="$("$1_test" "$file" "$dest")"
       if [[ "$skip" ]]; then
-        e_error "Skipping ~/$base, $skip."
+        e_error "Skipping ~/$base, $skip"
         continue
       fi
       # Destination file already exists in ~/. Back it up!
@@ -84,6 +84,10 @@ function copy_test() {
     echo "same file"
   elif [[ "$1" -ot "$2" ]]; then
     echo "destination file newer"
+  elif [[ -e "$2" ]]; then
+    echo "file exists, possible manual interventions:"
+    echo "cp -f $1 $2"
+    echo "cat $1 >> $2"
   fi
 }
 function copy_do() {
