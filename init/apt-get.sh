@@ -29,9 +29,6 @@ install-program python-dev
 install-program cmake
 install-program exuberant-ctags
 
-e_header "Cloning .vim"
-git clone --recurse-submodules -j8 https://github.com/Fmancino/.vim ~/.vim
-
 if [[ ! "$(type -P nvim)" ]]; then
     e_header "Installing nvim"
     if is_ubuntu; then
