@@ -56,4 +56,4 @@
 [grep]
 	lineNumber = true
 [init]
-    templatedir = ~/.git_template
+    templatedir = ~/dotfiles/effortless_ctags/git_template
