@@ -1,7 +1,5 @@
-# My dotfiles!
-export DOTFILES=~/dotfiles
-
-# Add local direcotry to path
+# This file should be sourced and DOTFILES variable set before sourcing it
+# Add local directory to path
 PATH=$PATH:$DOTFILES/bin
 
 # OS detection
@@ -155,9 +153,6 @@ fi
 source $DOTFILES/source/ros-bash.sh
 source $DOTFILES/source/e-cmd.sh
 source $DOTFILES/source/git-completion.bash
-if [ -f ~/user_bash.sh ]; then
-    source ~/user_bash.sh
-fi
 
 # export FZF_DEFAULT_COMMAND='
   # (git ls-tree -r --name-only HEAD ||
