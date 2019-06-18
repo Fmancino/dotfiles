@@ -153,6 +153,7 @@ if ! shopt -oq posix; then
 fi
 
 source $DOTFILES/source/ros-bash.sh
+source $DOTFILES/source/e-cmd.sh
 source $DOTFILES/source/git-completion.bash
 if [ -f ~/user_bash.sh ]; then
     source ~/user_bash.sh
