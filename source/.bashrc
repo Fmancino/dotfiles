@@ -167,3 +167,6 @@ source $DOTFILES/source/git-completion.bash
 # --follow: Follow symlinks
 # --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob \!.git/*'
+
+#conplete man with command names
+complete -c man
