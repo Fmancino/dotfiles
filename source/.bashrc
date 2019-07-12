@@ -156,6 +156,7 @@ fi
 source $DOTFILES/source/ros-bash.sh
 source $DOTFILES/source/e-cmd.sh
 source $DOTFILES/source/git-completion.bash
+source $DOTFILES/source/history-functions.sh
 
 # export FZF_DEFAULT_COMMAND='
   # (git ls-tree -r --name-only HEAD ||
