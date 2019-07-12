@@ -1,6 +1,5 @@
 /backups/
 .DS_store
-*history*
 bookmarks
 tagged
 user_flags.vim
