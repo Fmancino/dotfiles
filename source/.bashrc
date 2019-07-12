@@ -78,6 +78,9 @@ bind '"\e[B":history-search-forward'
 bind '"^P":history-search-backward'
 bind '"^N":history-search-forward'
 
+# Have time formatted history
+export HISTTIMEFORMAT='%y%m%d_%H:%M:%S '
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 ## Settings from ubuntu standard
