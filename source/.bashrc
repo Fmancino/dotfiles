@@ -23,7 +23,7 @@ if is_osx; then
 else
     export VISUAL=vim
 fi
-export EDITOR=vi
+export EDITOR=vim
 
 # Add language
 export LC_ALL=en_US.UTF-8
