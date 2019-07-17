@@ -3,7 +3,6 @@
 #CREATION DATE: 17-06-2019
 #PURPOSE: Restart process given full command line used to start it
 #-------------------------------------------------------------------------
-set -e
 if [ $# -lt 1 ]; then
     echo "$0 <full command name>"
     exit
