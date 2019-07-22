@@ -36,29 +36,29 @@ URxvt.keysym.Control-0x2d: perl:font-size:decrease
 *.color8:       #75715e
 
 ! red
-*.color1:       #f92672
+*.color1:       #b3285a
 *.color9:       #f92672
 
 ! green
-*.color2:       #a6e22e
-*.color10:      #a6e22e
+*.color2:       #8dc127
+*.color10:      #baff34
 
 ! yellow
-*.color3:       #f4bf75
+*.color3:       #f99100
 *.color11:      #f4bf75
 
 ! blue
-*.color4:       #0428FF
+*.color4:       #0428ff
 *.color12:      #66d9ef
 
 ! magenta
-*.color5:       #ae81ff
+*.color5:       #5c31a8
 *.color13:      #ae81ff
 
 ! cyan
-*.color6:       #a1efe4
+*.color6:       #48cbb9
 *.color14:      #a1efe4
 
 ! white
-*.color7:       #f8f8f2
+*.color7:       #c1c1c1
 *.color15:      #f9f8f5
