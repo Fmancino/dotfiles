@@ -123,11 +123,11 @@ if [[ "$backup" ]]; then
 fi
 
 # install basic softweare
-if is_ubuntu || is_debian; then
-    e_header "Starting the installer"
-    $DOTFILES/init/apt-get.sh
-    e_header "Installer done"
-fi
+# if is_ubuntu || is_debian; then
+    # e_header "Starting the installer"
+    # $DOTFILES/init/apt-get.sh
+    # e_header "Installer done"
+# fi
 
 e_header 'Source git configurations'
 git config --global include.path "$DOTFILES/source/.gitconfig"
