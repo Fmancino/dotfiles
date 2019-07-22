@@ -13,7 +13,8 @@ urxvt.letterSpace: -1
 urxvt.saveLines: 1000000
 
 !! Perl extensions
-urxvt.perl-ext-common: default,matcher,font-size,selection-to-clipboard,url-select,keyboard-select
+urxvt.perl-ext-common: default,matcher,font-size,selection-to-clipboard
+#Non official extensions: url-select,keyboard-select
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/xdg-open
 
@@ -21,6 +22,9 @@ URxvt.url-select.launcher: /usr/bin/xdg-open
 urxvt.url-launcher: /usr/bin/xdg-open
 urxvt.matcher.button: 1
 URxvt.matcher.rend.0: Uline Bold fg5
+URxvt.keysym.M-u: perl:matcher:last
+URxvt.keysym.M-i: perl:matcher:list
+
 !! Change font size on Control-Plus/Minus
 URxvt.keysym.Control-0x2b: perl:font-size:increase
 URxvt.keysym.Control-0x2d: perl:font-size:decrease
