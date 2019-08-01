@@ -2,10 +2,7 @@
 # Add local directory to path
 PATH=$PATH:$DOTFILES/bin
 
-# OS detection
-function is_osx() {
-  [[ "$OSTYPE" =~ ^darwin ]] || return 1
-}
+source $DOTFILES/source/os-functions.sh
 
 # remove contrl-s
 stty -ixon
@@ -127,6 +124,12 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+if is_ubuntu || is_debian; then
+    alias ?='apt-cache search'
+    alias ?f='apt-file search'
+    alias dl='sudo apt-get install'
+fi
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
