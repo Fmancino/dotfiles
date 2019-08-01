@@ -25,32 +25,12 @@ install-program curl
 install-program ranger
 install-program tree
 install-program tmux
-install-program python-dev
 install-program cmake
 install-program exuberant-ctags
+install-program build-essential
+install-program xclip
+install-program apt-file
 
-if [[ ! "$(type -P nvim)" ]]; then
-    e_header "Installing nvim"
-    if is_ubuntu; then
-        sudo add-apt-repository ppa:neovim-ppa/stable
-        sudo apt-get update
-    fi
-
-    sudo apt-get -y install neovim
-
-    sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
-    sudo update-alternatives --config vim
-    sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
-    sudo update-alternatives --config editor
-
-fi
-
-#python 3
-if [[ ! "$(type -P pip3)" ]]; then
-    e_header "Installing pip"
-    sudo apt-get -y install python3-pip
-    sudo -H pip3 install --upgrade neovim
-fi
 
 e_header "updating system"
 sudo apt-get update
