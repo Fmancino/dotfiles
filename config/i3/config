@@ -181,7 +181,8 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        font pango:monospace 13
+        font pango:monospace 12
+        position top
 }
 # exec_always --no-startup-id /home/${USER}/.config/polybar/launch.sh
 
