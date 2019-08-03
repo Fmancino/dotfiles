@@ -179,11 +179,11 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-# bar {
-        # status_command i3status
-        # font pango:monospace 13
-# }
-exec_always --no-startup-id /home/${USER}/.config/polybar/launch.sh
+bar {
+        status_command i3status
+        font pango:monospace 13
+}
+# exec_always --no-startup-id /home/${USER}/.config/polybar/launch.sh
 
 # Suspend with mod+x
 bindsym $mod+z exec i3lock -i ~/pictures/space.png -e -t && systemctl suspend
@@ -199,8 +199,8 @@ exec_always --no-startup-id feh --bg-scale Downloads/1560054149007.jpg
 exec_always --no-startup-id flashfocus
 
 # start trays
-exec_always --no-startup-id nm-applet &
-exec_always --no-startup-id /home/${USER}/dotfiles/bin/prestart.sh 'udiskie --no-automount --no-notify --tray'
+exec_always --no-startup-id /home/${USER}/dotfiles/bin/prestart.sh 'nm-applet'
+exec_always --no-startup-id /home/${USER}/dotfiles/bin/prestart.sh '/usr/bin/python /usr/bin/udiskie --no-automount --no-notify --tray'
 # class                 border  backgr. text    indicator child_border
 client.focused          #4c7899 #285577 #ffffff #2e9ef4   #F2F418
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
@@ -219,7 +219,7 @@ focus_follows_mouse no
 
 # hide_edge_borders both
 # Only enable gaps on a workspace when there is at least one container
-smart_gaps on
+# smart_gaps on
 
 # #---Extra XF86 Keys---# #
 bindsym XF86AudioMute		exec --no-startup-id amixer set Master toggle
@@ -229,7 +229,11 @@ bindsym Control+XF86AudioLowerVolume	exec --no-startup-id amixer set Master 1%-
 bindsym XF86AudioRaiseVolume	exec --no-startup-id amixer set Master 5%+
 bindsym Shift+XF86AudioRaiseVolume	exec --no-startup-id amixer set Master 10%+
 bindsym Control+XF86AudioRaiseVolume	exec --no-startup-id amixer set Master 1%+
-bindsym XF86PowerOff		exec --no-startup-id prompt "Shutdown computer?" "$shutdown"
+
+bindsym XF86MonBrightnessDown	exec --no-startup-id xbacklight -dec 15
+bindsym XF86MonBrightnessUp	exec --no-startup-id xbacklight -inc 15
+
+# bindsym XF86PowerOff		exec --no-startup-id prompt "Shutdown computer?" "$shutdown"
 ##bindsym XF86Copy		exec
 ##bindsym XF86Open		exec
 ##bindsym XF86Paste		exec
@@ -289,8 +293,6 @@ bindsym XF86PowerOff		exec --no-startup-id prompt "Shutdown computer?" "$shutdow
 ##bindsym XF86Finance		exec
 ##bindsym XF86Game		exec
 # bindsym XF86Shop		exec $BROWSER https://ebay.com
-# bindsym XF86MonBrightnessDown	exec --no-startup-id xbacklight -dec 15
-# bindsym XF86MonBrightnessUp	exec --no-startup-id xbacklight -inc 15
 # bindsym XF86AudioMedia		exec --no-startup-id $term -e ncmpcpp
 # bindsym XF86Display		exec --no-startup-id displayselect
 #bindsym XF86KbdLightOnOff	exec
