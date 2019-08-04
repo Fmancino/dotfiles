@@ -55,7 +55,7 @@ path_exists VPN {
 }
 
 tztime local {
-    format = "%Y-%m-%d %H:%M:%S"
+    format = "%Y-%m-%d w%V %H:%M"
     # hide_if_equals_localtime = true
 }
 
