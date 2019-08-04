@@ -187,16 +187,16 @@ bar {
 # exec_always --no-startup-id /home/${USER}/.config/polybar/launch.sh
 
 # Suspend with mod+x
-bindsym $mod+z exec i3lock -i ~/pictures/space.png -e -t && systemctl suspend
+bindsym $mod+shift+z exec i3lock -i ~/lock.png -e -t && systemctl suspend
+bindsym $mod+z exec i3lock -i ~/lock.png -e -t
 bindsym $mod+b exec qutebrowser
 bindsym $mod+shift+b exec firefox
 
-exec_always --no-startup-id /home/${USER}/.screenlayout/home2.sh
+exec_always --no-startup-id /home/${USER}/.screenlayout/home2.sh; feh --bg-scale ~/desktop.jpg
 exec --no-startup-id i3-sensible-terminal -e /home/${USER}/dotfiles/bin/tmux.sh
 exec_always /home/${USER}/dotfiles/bin/prestart.sh 'compton -b'
 exec_always --no-startup-id termite -e checkErrors.sh --hold
-# exec_always --no-startup-id feh --bg-scale Downloads/blue.jpg
-exec_always --no-startup-id feh --bg-scale Downloads/1560054149007.jpg
+
 exec_always --no-startup-id flashfocus
 
 # start trays
