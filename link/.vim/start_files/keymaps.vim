@@ -75,18 +75,6 @@ map Ä }
 map ö [
 map ä ]
 map gä g]
-inoremap Ö {
-inoremap Ä }
-inoremap ö [
-inoremap ä ]
-
-inoremap ,å å
-inoremap ,¨ ¨
-inoremap ,ä ä
-inoremap ,ö ö
-
-inoremap Ö<CR> {<CR>}<ESC>O
-inoremap {<CR> {<CR>}<ESC>O
 
 nnoremap œ <C-o> " Go back with alt-o on swedish keyboard
 
