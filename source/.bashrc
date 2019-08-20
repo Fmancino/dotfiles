@@ -83,7 +83,7 @@ export HISTTIMEFORMAT='%y%m%d_%H:%M:%S '
 ## Settings from ubuntu standard
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
-HISTCONTROL=ignoreboth
+HISTCONTROL=ignoreboth,erasedups
 
 # append to the history file, don't overwrite it
 shopt -s histappend
@@ -129,6 +129,7 @@ if is_ubuntu || is_debian; then
     alias ?='apt-cache search'
     alias ?f='apt-file search'
     alias dl='sudo apt-get install'
+    alias upd-system='sudo apt-get update && sudo apt-get upgrade'
 fi
 
 # Add an "alert" alias for long running commands.  Use like so:
