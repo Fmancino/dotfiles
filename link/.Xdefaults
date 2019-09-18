@@ -1,13 +1,13 @@
 !! Appearance
-urxvt.termName: rxvt-unicode
-urxvt.scrollBar: false
+URxvt.termName: rxvt-unicode
+URxvt.scrollBar: false
 ! urxvt.background: black
 ! urxvt.foreground: gray
 !! Font prefferenes
 ! urxvt.font: xft:DejaVu Sans Mono:pixelsize=13
 ! urxvt.boldFont: xft:DejaVu Sans Mono:pixelsize=13:weight=bold
-URxvt.font:     xft:bitstream vera sans mono:size=12:antialias=true
-URxvt.boldFont: xft:bitstream vera sans mono:bold:size=12:antialias=true
+URxvt.font:     xft:bitstream vera sans mono:size=11:antialias=true
+URxvt.boldFont: xft:bitstream vera sans mono:bold:size=11:antialias=true
 urxvt.letterSpace: -1
 !! Larger history limit
 urxvt.saveLines: 1000000
@@ -15,8 +15,8 @@ urxvt.saveLines: 1000000
 !! Perl extensions
 urxvt.perl-ext-common: default,matcher,font-size,selection-to-clipboard
 #Non official extensions: url-select,keyboard-select
-URxvt.keysym.M-u: perl:url-select:select_next
-URxvt.url-select.launcher: /usr/bin/xdg-open
+! URxvt.keysym.M-u: perl:url-select:select_next
+! URxvt.url-select.launcher: /usr/bin/xdg-open
 
 !! Open urls in browser with Control-Click
 urxvt.url-launcher: /usr/bin/xdg-open
@@ -24,6 +24,10 @@ urxvt.matcher.button: 1
 URxvt.matcher.rend.0: Uline Bold fg5
 URxvt.keysym.M-u: perl:matcher:last
 URxvt.keysym.M-i: perl:matcher:list
+!! Be able to scroll in secondary screen:
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+URxvt.secondaryWheel: 1
 
 !! Change font size on Control-Plus/Minus
 URxvt.keysym.Control-0x2b: perl:font-size:increase
