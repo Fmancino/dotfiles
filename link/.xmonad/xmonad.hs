@@ -29,9 +29,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch gmrun
     , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
 
-    -- close focused window
-    , ((modm .|. shiftMask, xK_c     ), kill)
-
      -- Rotate through the available layout algorithms
     , ((modm,               xK_space ), sendMessage NextLayout)
 
@@ -86,8 +83,11 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- , ((modm              , xK_b     ), sendMessage ToggleStruts)
     , ((modm              , xK_b     ), spawn "firefox")
 
+    -- close focused window
+    , ((modm .|. shiftMask, xK_c     ), io (exitWith ExitSuccess))
+
     -- Quit xmonad
-    , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
+    , ((modm .|. shiftMask, xK_q     ), kill)
 
     -- Restart xmonad
     , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")
