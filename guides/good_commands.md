@@ -180,4 +180,10 @@ generic-receive-offload: off
 ethtool -k <device>
 # remove settings on the fly:
 ethtool -K <device> tso off gso off gro off
+
+# Printing in linux
+If you want to define a default printer just set the "PRINER" variable
+```
+lpstat -t
+lpr -P printer file
 ```
