@@ -1,3 +1,22 @@
+## SSH keypair
+
+Creating and sending to server
+```
+ssh-keygen -t rsa -b 4096
+#    or newer
+ssh-keygen -f ~/.ssh/my_key -t ecdsa -b 521
+
+ssh-copy-id -i ~/.ssh/my_key user@host
+```
+Example .ssh/config file:
+```
+Host my_host
+    HostName 111.111.111.111
+    User you
+    IdentityFile /home/$USER/.ssh/my_key
+```
+
+
 ## Find USB device:
 
 Look at the output of `dmesg` after device is connected.
