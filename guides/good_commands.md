@@ -1,4 +1,4 @@
-## SSH keypair
+## SSH key pair
 
 Creating and sending to server
 ```
@@ -16,6 +16,18 @@ Host my_host
     IdentityFile /home/$USER/.ssh/my_key
 ```
 
+## Installed libraries
+
+Search installed libraries:
+```
+grep -r something /usr/include
+```
+
+Index installed libraries:
+```
+cd /usr/include
+sudo ctags -R
+```
 
 ## Find USB device:
 
