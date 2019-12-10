@@ -6,6 +6,8 @@ import qualified Data.Map        as M
 
 import XMonad.Config.Desktop
 import XMonad.Config.Xfce
+import XMonad.Layout.NoBorders
+
 
 baseConfig = xfceConfig
 
@@ -15,6 +17,30 @@ baseConfig = xfceConfig
 -- "windows key" is usually mod4Mask.
 --
 myModMask       = mod4Mask
+
+-- Layouts:
+
+-- You can specify and transform your layouts by modifying these values.
+-- If you change layout bindings be sure to use 'mod-shift-space' after
+-- restarting (with 'mod-q') to reset your layout state to the new
+-- defaults, as xmonad preserves your old layout settings by default.
+--
+-- The available layouts.  Note that each layout is separated by |||,
+-- which denotes layout choice.
+--
+myLayoutHook = tiled ||| Mirror tiled ||| noBorders Full
+  where
+     -- default tiling algorithm partitions the screen into two panes
+     tiled   = Tall nmaster delta ratio
+
+     -- The default number of windows in the master pane
+     nmaster = 1
+
+     -- Default proportion of screen occupied by master pane
+     ratio   = 1/2
+
+     -- Percent of screen to increment by when resizing panes
+     delta   = 3/100
 
 -- Key bindings. Add, modify or remove key bindings here.
 --
@@ -118,5 +144,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 main = xmonad baseConfig{
         terminal           = "urxvt",
         modMask            = myModMask,
-        keys               = myKeys
+        keys               = myKeys,
+        layoutHook         = myLayoutHook
     }
