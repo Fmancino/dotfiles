@@ -16,6 +16,19 @@ Host my_host
     IdentityFile /home/$USER/.ssh/my_key
 ```
 
+## mount .img file in linux with loop device
+
+From: https://fossbytes.com/mounting-isos-image-file-types-in-linux/
+
+```
+sudo losetup -f -P <file.img>
+losetup -a  # see what we mounted
+sudo mount <dev/loopXpX> <media/user/file>
+# take away
+sudo umount <media/user/file>
+losetup -d <dev/loopX> # or if you have no other devices:  losetup -D
+```
+
 ## Installed libraries
 
 Search installed libraries:
