@@ -9,4 +9,4 @@ if exists(":CompilerSet") != 2
     command -nargs=* CompilerSet setlocal <args>
 endif
 CompilerSet efm=%f:%l:%c:%m
-CompilerSet makeprg=pylint3
+CompilerSet makeprg=pylint
