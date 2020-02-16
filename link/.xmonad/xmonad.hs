@@ -8,8 +8,7 @@ import XMonad.Config.Desktop
 import XMonad.Config.Xfce
 import XMonad.Layout.NoBorders
 
-
-baseConfig = xfceConfig
+baseConfig = desktopConfig
 
 -- modMask lets you specify which modkey you want to use. The default
 -- is mod1Mask ("left alt").  You may also consider using mod3Mask
@@ -118,7 +117,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Restart xmonad
     , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")
     -- Lock computer
-    , ((modm              , xK_z     ), spawn "i3lock -i ~/lock.png -e -t && systemctl suspend")
+    , ((modm              , xK_z     ), spawn "i3lock -i ~/lock.png -e -t")
+    -- Sleep computer
+    , ((modm .|. shiftMask, xK_z     ), spawn "i3lock -i ~/lock.png -e -t && systemctl suspend")
     ]
     ++
 
