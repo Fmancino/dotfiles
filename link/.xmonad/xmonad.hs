@@ -7,6 +7,7 @@ import qualified Data.Map        as M
 import XMonad.Config.Desktop
 import XMonad.Config.Xfce
 import XMonad.Layout.NoBorders
+import Graphics.X11.ExtraTypes.XF86
 
 baseConfig = desktopConfig
 
@@ -133,6 +134,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm              , xK_z     ), spawn "i3lock -i ~/lock.png -e -t")
     -- Sleep computer
     , ((modm .|. shiftMask, xK_z     ), spawn "i3lock -i ~/lock.png -e -t && systemctl suspend")
+    -- Audio up
+    , ((0, xF86XK_AudioMute), spawn "amixer -q set Master,0 toggle")
+    , ((0, xF86XK_AudioLowerVolume), spawn "amixer -q set Master,0 5%- unmute")
+    , ((0, xF86XK_AudioRaiseVolume), spawn "amixer -q set Master,0 5%+ unmute")
     ]
     ++
 
