@@ -17,6 +17,16 @@ baseConfig = desktopConfig
 --
 myModMask       = mod4Mask
 
+------------------------------------------------------------------------
+-- Startup hook
+
+-- Perform an arbitrary action each time xmonad starts or is restarted
+-- with mod-q.  Used by, e.g., XMonad.Layout.PerWorkspace to initialize
+-- per-workspace layout choices.
+--
+-- By default, do nothing.
+myStartupHook = spawn "/home/$USER/.xmonad/xmonad_start.sh"
+
 -- Layouts:
 
 -- You can specify and transform your layouts by modifying these values.
@@ -59,6 +69,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     --  Reset the layouts on the current workspace to default
     , ((modm .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)
+
+    --  Set fullscreen (to get out set layout back to default)
+    , ((modm              , xK_f ), setLayout $ Layout $ noBorders Full)
 
     -- Resize viewed windows to the correct size
     , ((modm,               xK_n     ), refresh)
@@ -146,5 +159,6 @@ main = xmonad baseConfig{
         terminal           = "urxvt",
         modMask            = myModMask,
         keys               = myKeys,
+        startupHook        = myStartupHook,
         layoutHook         = myLayoutHook
     }
