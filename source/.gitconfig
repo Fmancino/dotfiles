@@ -6,7 +6,7 @@
 [push]
     default = current
 [alias]
-    plog = log --pretty=format:'%Cred%h%Creset %s -%C(yellow)%d%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    plog = log --pretty=format:'%Cred%h%Creset %s -%C(yellow)%d%Creset %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     l = log --graph --decorate --pretty=oneline --abbrev-commit -10
     ln = log --graph --decorate --pretty=oneline --abbrev-commit --name-status -5
