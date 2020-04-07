@@ -129,7 +129,7 @@ if is_ubuntu || is_debian; then
     alias ?='apt-cache search'
     alias ?f='apt-file search'
     alias dl='sudo apt-get install'
-    alias upd-system='sudo apt-get update && sudo apt-get upgrade'
+    alias upd-system='sudo apt-get update && time sudo apt-get dist-upgrade'
 fi
 
 # Add an "alert" alias for long running commands.  Use like so:
