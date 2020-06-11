@@ -16,6 +16,8 @@ endfunction
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-dispatch'
 noremap <leader>b :Make<CR>
 noremap <leader>wb :wa<CR>:Make<CR>
