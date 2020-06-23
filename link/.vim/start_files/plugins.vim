@@ -28,6 +28,8 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdcommenter'
 Plug 'mzlogin/vim-markdown-toc'
+Plug 'morhetz/gruvbox'
+let g:gruvbox_contrast_light = 'hard'
 
 Plug 'majutsushi/tagbar'
 nmap <F8> :TagbarToggle<CR>
