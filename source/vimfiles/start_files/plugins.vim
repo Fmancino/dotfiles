@@ -14,7 +14,7 @@ function! BuildYCM(info)
 endfunction
 
 
-call plug#begin($FMA_VIMDIR . 'plugged')
+call plug#begin($FMA_VIMDIR . '/plugged')
 
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
