@@ -1,3 +1,4 @@
+let $FMA_VIMDIR = $DOTFILES . "/source/vimfiles"
 if has("clipboard")
-    source ~/.vim/vimrc
+    source $FMA_VIMDIR/vimrc
 endif
