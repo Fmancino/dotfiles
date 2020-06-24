@@ -1,0 +1,18 @@
+"source settings
+
+if $FMA_VIMDIR == ""
+    let $FMA_VIMDIR = "~/.vim/"
+else
+    set runtimepath^=$FMA_VIMDIR
+endif
+
+source $FMA_VIMDIR/start_files/standard_settings.vim"
+source $FMA_VIMDIR/start_files/flags.vim"
+source $FMA_VIMDIR/start_files/personal_settings.vim
+source $FMA_VIMDIR/start_files/keymaps.vim
+source $FMA_VIMDIR/start_files/personal_functions.vim
+if g:fma_plugins == 1
+    source $FMA_VIMDIR/start_files/plugins.vim
+endif
+source $FMA_VIMDIR/start_files/autocommands.vim
+source $FMA_VIMDIR/start_files/sensible.vim

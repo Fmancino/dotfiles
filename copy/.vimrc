@@ -1,3 +1,3 @@
 if has("clipboard")
-    source ~/.vim/.vimrc
+    source ~/.vim/vimrc
 endif
