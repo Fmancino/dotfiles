@@ -40,8 +40,8 @@ nmap <F8> :TagbarToggle<CR>
 " Plug 'tpope/vim-vinegar'
 
 " Unmanaged plugin (manually installed and updated)
-Plug '~/.vim/bundle/a'
-Plug '~/.vim/bundle/gtags'
+Plug $FMA_VIMDIR . '/bundle/a'
+Plug $FMA_VIMDIR . '/bundle/gtags'
 
 Plug 'ap/vim-css-color'
 
