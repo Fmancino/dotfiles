@@ -4,6 +4,7 @@ if $FMA_VIMDIR == ""
     let $FMA_VIMDIR = "~/.vim/"
 else
     set runtimepath^=$FMA_VIMDIR
+    set runtimepath+=$FMA_VIMDIR/after
 endif
 
 source $FMA_VIMDIR/start_files/standard_settings.vim"
