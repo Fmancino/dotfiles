@@ -34,6 +34,8 @@ let g:gruvbox_contrast_light = 'hard'
 Plug 'majutsushi/tagbar'
 nmap <F8> :TagbarToggle<CR>
 
+Plug 'sheerun/vim-polyglot'
+
 " Plug 'tpope/vim-surround'
 " Plug 'keith/swift.vim'
 " Plug 'vim-airline/vim-airline'
