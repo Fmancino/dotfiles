@@ -56,6 +56,7 @@ autocmd FileType python IndentGuidesEnable
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'KabbAmine/zeavim.vim'
+Plug 'ackyshake/VimCompletesMe'
 if has('nvim')
     " Both options are optional. You don't have to install fzf in ~/.fzf
     " and you don't have to run install script if you use fzf only in Vim.

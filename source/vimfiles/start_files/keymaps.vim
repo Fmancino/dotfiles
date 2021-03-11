@@ -7,7 +7,7 @@ nnoremap <leader>m "myiw:!get-merge <C-R>m<Enter>
 " From vinegar.vim, minus the rest
 nnoremap - :Ex<Enter>
 
-inoremap <Tab> <C-N>
+" inoremap <Tab> <C-N> now provided by plugin
 inoremap ,<Tab> <Tab>
 
 nnoremap <leader>cf :let @+=expand("%:p")<CR>    " Mnemonic: Copy File path
