@@ -76,21 +76,21 @@ bind '"^P":history-search-backward'
 bind '"^N":history-search-forward'
 
 # Have time formatted history
-export HISTTIMEFORMAT='%y%m%d_%H:%M:%S '
+#export HISTTIMEFORMAT='%y%m%d_%H:%M:%S '
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 ## Settings from ubuntu standard
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
-HISTCONTROL=ignoreboth,erasedups
+HISTCONTROL=ignoreboth:erasedups
 
 # append to the history file, don't overwrite it
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=11000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
