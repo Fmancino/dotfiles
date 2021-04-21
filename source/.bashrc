@@ -127,10 +127,10 @@ alias la='ls -A'
 alias l='ls -CF'
 
 if is_ubuntu || is_debian; then
-    alias ?='apt-cache search'
+    alias ?='apt search'
     alias ?f='apt-file search'
-    alias dl='sudo apt-get install'
-    alias upd-system='sudo apt-get update && time sudo apt-get dist-upgrade'
+    alias dl='sudo apt install'
+    alias upd-system='sudo apt update && time sudo apt dist-upgrade'
 fi
 
 # used to open files ans urls, use xdg-mime to set favorite program
