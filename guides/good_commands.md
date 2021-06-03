@@ -117,8 +117,8 @@ ip route get to 20.0.0.1
 ## Dump traffic in the network
 ```
 tcpdump
-# Dump ethernet
-tcpdump -i eth0
+# Dump ethernet, line buffered(l), no DNS resolve (n), print packet ascii (A)
+tcpdump -lnAi eth0
 # List interfaces:
 tcpdump -D
 # Other:
