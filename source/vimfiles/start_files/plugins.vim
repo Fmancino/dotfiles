@@ -57,6 +57,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'KabbAmine/zeavim.vim'
 Plug 'ackyshake/VimCompletesMe'
+let g:vcm_omni_pattern = 'oooooooooooooooooooooooo' " disable omni competition
 if has('nvim')
     " Both options are optional. You don't have to install fzf in ~/.fzf
     " and you don't have to run install script if you use fzf only in Vim.
